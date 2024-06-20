@@ -1,0 +1,37 @@
+crie uma aplicação em sql e SprintBoot com model view e controller
+
+
+	4 blocos(Bloco A, Bloco B ,Bloco C e Bloco D)
+	Cada bloco com duas salas
+	Bloco A	Sala 1	Sala 2
+	Bloco B	Sala 3	Sala 4
+	Bloco C	Sala 5	Sala 6
+	Bloco D	Sala 7	Sala 8
+
+ cada sala é uma tabela,também terá uma tabela de depósito e uma de descarte
+	tela index: opção de escolher 
+
+	primeiro seleciona o bloco e depois a sala
+	poderemos inserir informações nas tabelas(salas)
+	quais informações?
+	responsável
+	Categoria
+	Nome
+	Código
+	
+	movimentar entre tabelas(entre salas ou deposito)
+	seleciona a sala 1
+	seleciona o ativo
+	seleciona o destino 
+	comita
+	
+	quando o item entrar na tabela depósito
+	se passou 6 meses 
+	mover para tabela descarte
+	
+	
+	Tabela de responsáveis
+	para cadastrar os responsáveis 
+	quais informações na tabela?
+	nome
+	email

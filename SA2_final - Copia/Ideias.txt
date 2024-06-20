@@ -1,0 +1,69 @@
+Método cadastroAdmBD: 
+
+@PostMapping("cadastrar-adm")
+public ModelAndView cadastroAdmBD(Administrador adm) {
+    // Implementação do método
+}
+
+
+
+
+
+Método acessoAdmLogin:
+
+@PostMapping("acesso-adm")
+public ModelAndView acessoAdmLogin(@RequestParam String cpf,
+                                   @RequestParam String senha,
+                                   RedirectAttributes attributes) {
+    // Implementação do método
+}
+
+
+
+
+
+Método acessoPageIndex:
+
+@PostMapping("/index")
+public String acessoPageIndex() {
+    String acesso = "";
+    ModelAndView mv = new ModelAndView();
+    if (acessoInternoAdm) {
+        System.out.println("Acesso Permitido");
+        acesso = "/index";
+        acessoInternoAdm = false;
+    } else {
+        String mensagem = "Acesso não Permitido - faça Login";
+        System.out.println(mensagem);
+        acesso = "/index";
+        mv.addObject("msg", mensagem);
+        mv.addObject("classe", "vermelho");
+    }
+
+    return acesso;
+}
+
+
+
+
+
+Método acessoPageCadastroProfessor:
+
+@PostMapping("/cadastro-professor")
+public String acessoPageCadastroProfessor() {
+    String acesso = "";
+    ModelAndView mv = new ModelAndView();
+    if (acessoInternoAdm) {
+        System.out.println("Acesso Permitido");
+        acesso = "cadastro/cadastro-professor";
+    } else {
+        String mensagem = "Acesso não Permitido - faça Login";
+        System.out.println(mensagem);
+        acesso = "cadastro/cadastro-professor";
+        mv.addObject("msg", mensagem);
+        mv.addObject("classe", "vermelho");
+    }
+
+    return acesso;
+}
+
